@@ -38,6 +38,10 @@ nav {
     color: #caac03; 
 }
 
+.nav-links a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
 .icons {
     display: flex;
     align-items: center;
@@ -49,4 +53,43 @@ nav {
     margin-right: 15px;
     cursor: pointer;
     transition: transform 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.25); 
+}
+
+<!-- Press & Reviews --->
+
+.press-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.press-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.press-image {
+    width: 45%;
+    height: 300px;
+    background-color: #ffffff; 
+}
+
+.press-text h2 {
+    color: #333;
+}
+
+.read-more-button {
+    display: block;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: fit-content;
+    margin: auto;
 }
