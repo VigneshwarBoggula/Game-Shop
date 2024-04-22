@@ -34,6 +34,10 @@ nav {
     transition: color 0.3s;
 }
 
+.nav-links a:hover {
+    color: #caac03; 
+}
+
 .icons {
     display: flex;
     align-items: center;
@@ -45,4 +49,8 @@ nav {
     margin-right: 15px;
     cursor: pointer;
     transition: transform 0.3s;
+}
+
+.icons img:hover {
+    transform: scale(1.25); 
 }
