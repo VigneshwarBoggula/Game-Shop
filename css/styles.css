@@ -50,7 +50,3 @@ nav {
     cursor: pointer;
     transition: transform 0.3s;
 }
-
-.icons img:hover {
-    transform: scale(1.25); 
-}
