@@ -63,7 +63,43 @@
 
 
     <script>
-        // JavaScript Code
+             
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+
+        // Function to validate form inputs
+        function validateForm() {
+            var firstName = document.getElementById('first-name').value;
+            var lastName = document.getElementById('second-name').value;
+            var birthDate = document.getElementById('birth-date').value;
+            var phoneNumber = document.getElementById('phone-number').value;
+            var email = document.getElementById('email').value;
+
+            // Simple validation check to ensure fields are not empty
+            if (!firstName || !lastName || !birthDate || !phoneNumber || !email) {
+                alert('Please fill in all fields.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+
+        // Function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Validate form
+            if (validateForm()) {
+                // Here, you could implement an AJAX request to submit the form data
+                console.log('Form is valid, submit data...');
+                
+                // Simulating a successful submission
+                alert('Settings saved successfully!');
+            }
+        }
+
+        // Attach an event listener for form submission
+        form.addEventListener('submit', handleFormSubmit);
+    });
     </script>
 </body>
 </html>
