@@ -1,3 +1,43 @@
+/* Main press and reviews page */
+.press-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.press-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.press-image {
+    width: 45%;
+    background-color: #ffffff;
+    overflow: hidden; 
+}
+
+.press-image img {
+    width: 100%;
+    height: auto;
+}
+
+.press-text h2 {
+    color: #333;
+}
+
+.read-more-button {
+    display: block;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+
+/* Navagation  bar*/
 body {
     font-family: Verdana, sans-serif;
     margin: 0;
