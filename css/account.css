@@ -94,7 +94,7 @@ input[type="search"] {
 
 .container {
     display: flex;
-    height: calc(100vh - 40px); /* Adjust based on your header/footer height */
+    height: calc(100vh - 40px); 
 }
 
 aside {
