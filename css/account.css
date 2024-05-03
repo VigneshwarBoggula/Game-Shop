@@ -67,7 +67,10 @@ nav {
 }
 
 body, html {
+    height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     padding: 0;
 }
 
@@ -143,4 +146,19 @@ footer {
     text-align: center;
     padding: 10px 0;
     background-color: #f1f1f1;
+}
+
+button {
+    background-color: #333; 
+    color: white; 
+    border: none;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; 
+}
+
+button:hover {
+    background-color: #555; 
 }
