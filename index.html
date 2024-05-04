@@ -13,9 +13,16 @@
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="#">Products</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Products</a>
+                <div class="dropdown-content">
+                    <a href="pages/videogames.html">Video Games</a>
+                    <a href="pages/consoles.html">Consoles</a>
+                    <a href="pages/accessories.html">Accessories</a>
+                </div>
+            </div>
             <a href="press.html">Press & Reviews</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
         <div class="icons">
             <img src="images/search_icon.png" alt="Search">
@@ -27,6 +34,41 @@
     </nav>
 
     <!-- Home Page Content -->
+    <div class="home-page-content">
+        <div class="top-image">
+            <img src="images/top_image.png" alt="Top Image">
+        </div>
+        <hr class="divider">
+        <div class="section-header">
+            <h2>Popular Games</h2>
+            <a href="pages/videogames.html" class="shop-all-link">
+                <button class="shop-all-button">Shop All <span>&rarr;</span></button>
+            </a>
+        </div>
+        <div class="product-boxes">
+            <!-- Product Box 1 -->
+            <div class="product-box">
+                <img src="images/product1.jpg" alt="Product 1">
+                <h3>Legend of Zelda: Tears of the Kingdom</h3>
+                <p>Play as Link and save Hyrule.</p>
+                <a href="#">Buy Now</a>
+            </div>
+            <!-- Product Box 2 -->
+            <div class="product-box">
+                <img src="images/product2.jpg" alt="Product 2">
+                <h3>God of War: Ragnarok</h3>
+                <p>Help Kratos face the trails of Vallhala.</p>
+                <a href="#">Buy Now</a>
+            </div>
+            <!-- Product Box 3 -->
+            <div class="product-box">
+                <img src="images/product3.png" alt="Product 3">
+                <h3>Mincraft</h3>
+                <p>Make the sandbox your own with Steve!</p>
+                <a href="#">Buy Now</a>
+            </div>
+        </div>
+    </div>
 
     <script>
         //  JavaScript Code
