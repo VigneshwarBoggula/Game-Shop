@@ -12,9 +12,8 @@ import PlayStation5Review from './pages/playstation_article';
 import ModernWarfare3Review from './pages/mw3_article';
 import Contact from './pages/contact';
 import Cart from './pages/cart';
-import Account from './pages/account';
+import AccountSettings from './pages/account';
 import Order from './pages/order';
-// import './app/home/styles.css';
 
 const Page = () => {
   return (
@@ -22,15 +21,15 @@ const Page = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<VideoGames />} />
-        <Route path="/about" element={<Consoles />} />
-        <Route path="/contact" element={<Accessories />} />
+        <Route path="/videogames" element={<VideoGames />} />
+        <Route path="/consoles" element={<Consoles />} />
+        <Route path="/accessories" element={<Accessories />} />
         <Route path="/press" element={<Press />} />
         <Route path="/playstation_article" element={<PlayStation5Review />} />
         <Route path="/mw3_article" element={<ModernWarfare3Review />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/account" element={<Account />} />
+        <Route path="/account" element={<AccountSettings />} />
         <Route path="/order" element={<Order />} />
       </Routes>
     </Router>
