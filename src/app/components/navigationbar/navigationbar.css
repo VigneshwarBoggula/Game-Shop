@@ -1,0 +1,26 @@
+/* src/components/navigationbar/navigationbar.css */
+
+.navigation-bar {
+    background-color: #333;
+    padding: 1em;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+  }
+  
+  .nav-item a:hover {
+    background-color: #575757;
+  }
+  
