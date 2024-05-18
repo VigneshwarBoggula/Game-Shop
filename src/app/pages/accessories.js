@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import '../styles/products.css';
+import '../styles/accessories.css';
 
 const Accessories = () => {
   return (

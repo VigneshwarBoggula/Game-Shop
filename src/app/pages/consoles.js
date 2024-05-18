@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import '../styles/products.css';
+import '../styles/consoles.css';
 
 const Consoles = () => {
   return (

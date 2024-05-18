@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.video-games-page {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+  
+.filters-and-sort-sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.filters-section, .sort-by-section {
+    width: 45%;
+}
+  
+.filters-section h2, .sort-by-section h2 {
+    margin-bottom: 10px;
+}
+  
+.filter, .sort-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+  
+.filter input[type="radio"], .sort-option input[type="radio"] {
+    margin-right: 5px;
+}
+  
+.filter label, .sort-option label {
+    margin-right: 10px;
+}
