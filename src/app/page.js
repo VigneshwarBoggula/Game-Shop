@@ -1,29 +1,54 @@
-import React from 'react';
-import NavigationBar from '../components/navigationbar/navigationbar';
-import HomePageContent from './home/home';
-import ProductBox from '../components/productbox/productbox';
-import '../app/home/styles.css';
+'use client';
+
+import React, { useState } from 'react';
+import NavigationBar from './components/navigationbar/navigationbar';
+import Home from './pages/home';
+import VideoGames from './pages/videogames';
+import Consoles from './pages/consoles';
+import Accessories from './pages/accessories';
+import Press from './pages/press';
+import PlayStation5Review from './pages/playstation_article';
+import ModernWarfare3Review from './pages/mw3_article';
+import Contact from './pages/contact';
+import Cart from './pages/cart';
+import Account from './pages/account';
+import Order from './pages/order';
+// import './app/home/styles.css';
 
 const Page = () => {
+  const [selectedPage, setSelectedPage] = useState('home');
+
+  const renderPageContent = () => {
+    switch (selectedPage) {
+      case 'videogames':
+        return <VideoGames />;
+      case 'consoles':
+        return <Consoles />;
+      case 'accessories':
+        return <Accessories />;
+      case 'press':
+        return <Press />;
+      case 'playstation_article':
+        return <PlayStation5Review />;
+      case 'mw3_article':
+        return <ModernWarfare3Review />;
+      case 'contact':
+        return <Contact />;
+      case 'cart':
+        return <Cart />;
+      case 'account':
+        return <Account />;
+      case 'order':
+        return <Order />;
+      default:
+        return <Home />;
+    }
+  };
+
   return (
     <>
-      <NavigationBar />
-      <HomePageContent />
-      <ProductBox
-        image="../../public/product1.jpg"
-        title="Legend of Zelda: Tears of the Kingdom"
-        description="Play as Link and save Hyrule."
-      />
-      <ProductBox
-        image="../../public/product2.jpg"
-        title="God of War: Ragnarok"
-        description="Help Kratos face the trails of Vallhala."
-      />
-      <ProductBox
-        image="../../public/product3.png"
-        title="Minecraft"
-        description="Make the sandbox your own with Steve!"
-      />
+      <NavigationBar onSelectPage={setSelectedPage} />
+      {renderPageContent()}
     </>
   );
 };
