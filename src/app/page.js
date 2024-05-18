@@ -11,7 +11,7 @@ import Press from './pages/press';
 import PlayStation5Review from './pages/playstation_article';
 import ModernWarfare3Review from './pages/mw3_article';
 import Contact from './pages/contact';
-import Cart from './pages/cart';
+import ShoppingCart from './pages/cart';
 import AccountSettings from './pages/account';
 import Order from './pages/order';
 
@@ -28,7 +28,7 @@ const Page = () => {
         <Route path="/playstation_article" element={<PlayStation5Review />} />
         <Route path="/mw3_article" element={<ModernWarfare3Review />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/account" element={<AccountSettings />} />
         <Route path="/order" element={<Order />} />
       </Routes>
