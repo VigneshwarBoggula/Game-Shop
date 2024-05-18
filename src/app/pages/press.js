@@ -2,9 +2,6 @@
 
 import React from 'react';
 import '../styles/press.css';
-import searchIcon from '../../../public/search_icon.png';
-import cartIcon from '../../../public/cart_icon.png';
-import accountIcon from '../../../public/account_icon.png';
 import playstationImg from '../../../public/playstation.jpg';
 import mw3Img from '../../../public/mw3.jpg';
 
