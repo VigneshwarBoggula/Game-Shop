@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavigationBar from './components/navigationbar/navigationbar';
 import Home from './pages/home';
 import VideoGames from './pages/videogames';
@@ -16,40 +17,23 @@ import Order from './pages/order';
 // import './app/home/styles.css';
 
 const Page = () => {
-  const [selectedPage, setSelectedPage] = useState('home');
-
-  const renderPageContent = () => {
-    switch (selectedPage) {
-      case 'videogames':
-        return <VideoGames />;
-      case 'consoles':
-        return <Consoles />;
-      case 'accessories':
-        return <Accessories />;
-      case 'press':
-        return <Press />;
-      case 'playstation_article':
-        return <PlayStation5Review />;
-      case 'mw3_article':
-        return <ModernWarfare3Review />;
-      case 'contact':
-        return <Contact />;
-      case 'cart':
-        return <Cart />;
-      case 'account':
-        return <Account />;
-      case 'order':
-        return <Order />;
-      default:
-        return <Home />;
-    }
-  };
-
   return (
-    <>
-      <NavigationBar onSelectPage={setSelectedPage} />
-      {renderPageContent()}
-    </>
+    <Router>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<VideoGames />} />
+        <Route path="/about" element={<Consoles />} />
+        <Route path="/contact" element={<Accessories />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/playstation_article" element={<PlayStation5Review />} />
+        <Route path="/mw3_article" element={<ModernWarfare3Review />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/order" element={<Order />} />
+      </Routes>
+    </Router>
   );
 };
 
