@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-// import './press.css';
+import '../styles/press.css';
 import searchIcon from '../../../public/search_icon.png';
 import cartIcon from '../../../public/cart_icon.png';
 import accountIcon from '../../../public/account_icon.png';
