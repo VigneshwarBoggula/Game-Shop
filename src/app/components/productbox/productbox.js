@@ -9,7 +9,10 @@ const ProductBox = ({ image, title, description }) => {
       <img src={image} alt={title} />
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href="#">Buy Now</a>
+      <div className="buttons-container">
+        <button className="add-to-cart-button">Add to Cart</button>
+        <button className="more-button">More</button>
+      </div>
     </div>
   );
 };

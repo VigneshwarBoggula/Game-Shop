@@ -1,24 +1,7 @@
-.shop-all-button {
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.shop-all-button span {
-    margin-left: 5px;
-}
-
-.shop-all-button:hover {
-    background-color: #caac03;
-}
-
 .product-boxes {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px; /* Added margin-bottom */
 }
 
 .product-box {
@@ -28,6 +11,10 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    display: flex; /* Added display flex */
+    flex-direction: column; /* Added flex direction */
+    justify-content: space-between; /* Added justify content */
+    align-items: center;
 }
 
 .product-box img {
@@ -46,16 +33,24 @@
     margin-bottom: 10px;
 }
 
-.product-box a {
-    display: inline-block;
+.buttons-container {
+    margin-top: 20px; /* Adjusted margin top */
+    display: flex; /* Center buttons horizontally */
+    margin-right: 10px;
+}
+
+.buttons-container button {
+    margin-top: 10px; 
+    margin-right: 10px;/* Added margin top to separate buttons */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 16px;
     background-color: #333333;
     color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 5px;
     text-decoration: none;
+    border: none;
     transition: background-color 0.3s;
 }
 
-.product-box a:hover {
+.buttons-container button:hover {
     background-color: #caac03;
 }
