@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-// import './account.css';
+import '../styles/account.css';
 
 const AccountSettings = () => {
     const [formData, setFormData] = useState({
