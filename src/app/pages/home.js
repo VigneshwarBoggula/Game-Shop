@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/styles.css';
+import ProductBox from '../components/productbox/productbox';
+import '../styles/home.css';
 
 const Home = () => {
   return (
@@ -21,26 +22,23 @@ const Home = () => {
       </div>
       <div className="product-boxes">
         {/* Product 1 */}
-        <div className="product-box">
-          <img src="/product1.jpg" alt="Legend of Zelda: Tears of the Kingdom" />
-          <h3>Legend of Zelda: Tears of the Kingdom</h3>
-          <p>Play as Link and save Hyrule.</p>
-          <a href="#">Buy Now</a>
-        </div>
+        <ProductBox
+          image="/product1.jpg"
+          title="Legend of Zelda: Tears of the Kingdom"
+          description="Play as Link and save Hyrule."
+        />
         {/* Product 2 */}
-        <div className="product-box">
-          <img src="/product2.jpg" alt="God of War: Ragnarok" />
-          <h3>God of War: Ragnarok</h3>
-          <p>Help Kratos face the trials of Vallhala.</p>
-          <a href="#">Buy Now</a>
-        </div>
+        <ProductBox
+          image="/product2.jpg"
+          title="God of War: Ragnarok"
+          description="Help Kratos face the trials of Vallhala."
+        />
         {/* Product 3 */}
-        <div className="product-box">
-          <img src="/product3.png" alt="Minecraft" />
-          <h3>Minecraft</h3>
-          <p>Make the sandbox your own with Steve!</p>
-          <a href="#">Buy Now</a>
-        </div>
+        <ProductBox
+          image="/product3.png"
+          title="Minecraft"
+          description="Make the sandbox your own with Steve!"
+        />
       </div>
     </div>
   );
