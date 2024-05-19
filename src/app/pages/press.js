@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/press.css';
 import playstationImg from '../../../public/playstation.jpg';
 import mw3Img from '../../../public/mw3.jpg';
@@ -16,7 +17,7 @@ const Press = () => {
           </div>
           <div className="press-text">
             <h2>PlayStation 5: Game Changer or Disappointment?</h2>
-            <a href="playstation_article.html" className="read-more-button">Read More</a>
+            <Link to="/playstation_article" className="read-more-button">Read More</Link>
           </div>
         </div>
 
@@ -26,7 +27,7 @@ const Press = () => {
           </div>
           <div className="press-text">
             <h2>Modern Warfare 3: Hit or Miss?</h2>
-            <a href="mw3_article.html" className="read-more-button">Read More</a>
+            <Link to="/mw3_article" className="read-more-button">Read More</Link>
           </div>
         </div>
       </div>
