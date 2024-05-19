@@ -13,17 +13,17 @@ const Consoles = () => {
         <div className="product-box">
           <img src="/playstation.jpg" alt="PlayStation" />
           <h3>PlayStation</h3>
-          <a href="#">Shop Now</a>
+          <a href="#">Shop</a>
         </div>
         <div className="product-box">
           <img src="/nintendo.jpg" alt="Nintendo" />
           <h3>Nintendo</h3>
-          <a href="#">Shop Now</a>
+          <a href="#">Shop</a>
         </div>
         <div className="product-box">
           <img src="/xbox.jpg" alt="Xbox" />
           <h3>Xbox</h3>
-          <a href="#">Shop Now</a>
+          <a href="#">Shop</a>
         </div>
       </div>
     </div>

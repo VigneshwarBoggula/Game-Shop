@@ -16,17 +16,17 @@ const Accessories = () => {
         <div className="product-box">
           <img src="/headsets.jpg" alt="Headsets" />
           <h3>Headsets</h3>
-          <a href="#">Browse Now</a>
+          <a href="#">Browse</a>
         </div>
         <div className="product-box">
           <img src="/controllers.jpg" alt="Controllers" />
           <h3>Controllers</h3>
-          <a href="#">Browse Now</a>
+          <a href="#">Browse</a>
         </div>
         <div className="product-box">
           <img src="/chargers.jpg" alt="Chargers" />
           <h3>Chargers</h3>
-          <a href="#">Browse Now</a>
+          <a href="#">Browse</a>
         </div>
       </div>
     </div>
