@@ -1,7 +1,6 @@
 "use client"; 
 
 import React, { useContext, useEffect, useState } from 'react';
-import trashIcon from '../../../public/trash.svg';
 import { CartContext } from '../components/cartcontext/cartcontext';
 import '../styles/cart.css';
 
@@ -15,7 +14,7 @@ const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuan
           <button className="minus-button" onClick={() => reduceQuantity(id)}>-</button>
           <input type="text" className="quantity-input" value={quantity} readOnly />
           <button className="plus-button" onClick={() => increaseQuantity(id)}>+</button>
-          <button className="delete-button" onClick={() => removeFromCart(id)}><img src={trashIcon} alt="Delete" /></button>
+          <button className="delete-button" onClick={() => removeFromCart(id)}><img src={"/trash.svg"} alt="Delete" /></button>
         </div>
         <span className="item-price">${price}</span>
       </div>
