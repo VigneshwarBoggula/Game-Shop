@@ -17,7 +17,7 @@ const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuan
           <button className="plus-button" onClick={() => increaseQuantity(id)}>+</button>
           <button className="delete-button" onClick={() => removeFromCart(id)}><img src={trashIcon} alt="Delete" /></button>
         </div>
-        <span className="item-price">{price}</span>
+        <span className="item-price">${price}</span>
       </div>
     </li>
   );

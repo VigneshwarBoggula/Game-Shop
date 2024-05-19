@@ -29,7 +29,7 @@ const Home = () => {
           id="1"
           image="/product1.jpg"
           title="Legend of Zelda: Tears of the Kingdom"
-          price="$69.99"
+          price="69.99"
           quantity={1}
           description="Play as Link and save Hyrule."
           addToCart={addToCart}
@@ -39,7 +39,7 @@ const Home = () => {
           id="2"
           image="/product2.jpg"
           title="God of War: Ragnarok"
-          price="$59.99"
+          price="59.99"
           quantity={1}
           description="Help Kratos face the trials of Vallhala."
           addToCart={addToCart}
@@ -49,7 +49,7 @@ const Home = () => {
           id="3"
           image="/product3.png"
           title="Minecraft"
-          price="$49.99"
+          price="49.99"
           quantity={1}
           description="Make the sandbox your own with Steve!"
           addToCart={addToCart}
