@@ -1,33 +1,43 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
+import ProductBox from '../components/productbox/productbox';
+import { CartContext } from '../components/cartcontext/cartcontext';
 import '../styles/accessories.css';
 
 const Accessories = () => {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="accessories-page">
       <h1>Accessories</h1>
-      <div className="buttons">
-        <button className="filter-btn">Filter</button>
-        <button className="sort-btn">Sort</button>
-      </div>
+      <p>Choose your hardware</p>
       <div className="product-boxes-section">
         {/* Product Boxes */}
-        <div className="product-box">
-          <img src="/headsets.jpg" alt="Headsets" />
-          <h3>Headsets</h3>
-          <a href="#">Browse</a>
-        </div>
-        <div className="product-box">
-          <img src="/controllers.jpg" alt="Controllers" />
-          <h3>Controllers</h3>
-          <a href="#">Browse</a>
-        </div>
-        <div className="product-box">
-          <img src="/chargers.jpg" alt="Chargers" />
-          <h3>Chargers</h3>
-          <a href="#">Browse</a>
-        </div>
+        <ProductBox
+          id="7"
+          image="/headsets.jpg"
+          title="Headsets"
+          price="39.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
+        <ProductBox
+          id="8"
+          image="/controllers.jpg"
+          title="Controller"
+          price="59.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
+        <ProductBox
+          id="9"
+          image="/chargers.jpg"
+          title="Charger"
+          price="29.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
       </div>
     </div>
   );
