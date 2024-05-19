@@ -1,7 +1,7 @@
 .product-boxes {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Added margin-bottom */
+    margin-bottom: 20px; 
 }
 
 .product-box {
@@ -11,9 +11,9 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    display: flex; /* Added display flex */
-    flex-direction: column; /* Added flex direction */
-    justify-content: space-between; /* Added justify content */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
     align-items: center;
 }
 
@@ -39,15 +39,15 @@
 }
 
 .buttons-container {
-    margin-top: 20px; /* Adjusted margin top */
-    display: flex; /* Center buttons horizontally */
+    margin-top: 20px; 
+    display: flex; 
     margin-right: 10px;
 }
 
 .buttons-container button {
     margin-top: 10px; 
-    margin-right: 10px;/* Added margin top to separate buttons */
-    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px;
+    border-radius: 5px;
     padding: 8px 16px;
     background-color: #333333;
     color: #ffffff;
