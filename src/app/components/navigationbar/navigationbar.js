@@ -11,9 +11,7 @@ const NavigationBar = () => {
         <Link to="/">GameShop</Link>
       </div>
       <div className="testing">
-        <Link to="/mw3_article">MW3</Link>
 
-        <Link to="/playstation_article">PS5</Link>
         
         <Link to="/order">Order</Link>
       </div>
