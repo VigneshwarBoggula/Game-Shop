@@ -14,24 +14,27 @@ import Contact from './pages/contact';
 import ShoppingCart from './pages/cart';
 import AccountSettings from './pages/account';
 import Order from './pages/order';
+import { CartProvider } from './components/cartcontext/cartcontext';
 
 const Page = () => {
   return (
     <Router>
-      <NavigationBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/videogames" element={<VideoGames />} />
-        <Route path="/consoles" element={<Consoles />} />
-        <Route path="/accessories" element={<Accessories />} />
-        <Route path="/press" element={<Press />} />
-        <Route path="/playstation_article" element={<PlayStation5Review />} />
-        <Route path="/mw3_article" element={<ModernWarfare3Review />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<ShoppingCart />} />
-        <Route path="/account" element={<AccountSettings />} />
-        <Route path="/order" element={<Order />} />
-      </Routes>
+      <CartProvider>
+        <NavigationBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/videogames" element={<VideoGames />} />
+            <Route path="/consoles" element={<Consoles />} />
+            <Route path="/accessories" element={<Accessories />} />
+            <Route path="/press" element={<Press />} />
+            <Route path="/playstation_article" element={<PlayStation5Review />} />
+            <Route path="/mw3_article" element={<ModernWarfare3Review />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<ShoppingCart />} />
+            <Route path="/account" element={<AccountSettings />} />
+            <Route path="/order" element={<Order />} />
+          </Routes>
+      </CartProvider>
     </Router>
   );
 };

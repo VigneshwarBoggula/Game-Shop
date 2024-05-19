@@ -1,22 +1,23 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../components/cartcontext/cartcontext';
 import trashIcon from '../../../public/trash.svg';
 import '../styles/cart.css';
 
-const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {
+const CartItem = ({ id, title, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {
   return (
     <li className="cart-item">
-      {/*<img className="item-img" src={require(`./${image}`)} alt={name} />*/}
+      {/*<img className="item-img" src={require(`./${image}`)} alt={title} />*/}
       <div className="item-details">
-        <h3 className="item-name">{name}</h3>
+        <h3 className="item-name">{title}</h3>
         <div className="quantity">
           <button className="minus-button" onClick={() => reduceQuantity(id)}>-</button>
           <input type="text" className="quantity-input" value={quantity} readOnly />
           <button className="plus-button" onClick={() => increaseQuantity(id)}>+</button>
           <button className="delete-button" onClick={() => removeFromCart(id)}><img src={trashIcon} alt="Delete" /></button>
         </div>
-        <span className="item-price">${price}</span>
+        <span className="item-price">{price}</span>
       </div>
     </li>
   );
@@ -38,14 +39,14 @@ const OrderSummary = ({ subtotal, shippingCost, taxEstimate, total }) => {
 };
 
 const ShoppingCart = () => {
-  const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Scrimblo's Adventure", image: "game.jpg", price: 79.99, quantity: 1 },
-    { id: 2, name: "A Peaceful Walk", image: "game2.jpg", price: 1.99, quantity: 1 }
-  ]);
-
+  const { cartItems, setCartItems } = useContext(CartContext);
   const [subtotal, setSubtotal] = useState(0);
   const [taxEstimate, setTaxEstimate] = useState(0);
   const [total, setTotal] = useState(0);
+
+  const addToCart = (item) => {
+    setCartItems([...cartItems, { ...item, quantity: 1 }]);
+  };
 
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter(item => item.id !== id));
@@ -93,7 +94,7 @@ const ShoppingCart = () => {
               <CartItem
                 key={item.id}
                 id={item.id}
-                name={item.name}
+                title={item.title}
                 image={item.image}
                 price={item.price}
                 quantity={item.quantity}
