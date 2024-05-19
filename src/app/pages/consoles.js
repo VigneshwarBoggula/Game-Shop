@@ -12,6 +12,7 @@ const Consoles = () => {
     <div className="consoles-page">
       <h1>Consoles</h1>
       <p>Browse by console</p>
+      <hr className="divider" />
       <div className="product-boxes-section">
         {/* Product Boxes */}
         <ProductBox
