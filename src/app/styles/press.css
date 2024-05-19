@@ -11,20 +11,32 @@ body {
 
 .press-item {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column; /* Change to column for better mobile responsiveness */
+    justify-content: center; /* Center the items */
+    align-items: center; /* Center the items */
     margin-top: 50px;
 }
 
+@media (min-width: 768px) {
+    .press-item {
+        flex-direction: row; /* Change to row for larger screens */
+    }
+}
+
 .press-image {
-    width: 45%;
-    background-color: #ffffff;
-    overflow: hidden; 
+    width: 100%; /* Set to 100% width of container */
+    max-width: 600px; /* Add a max-width to constrain the image size */
+    margin-bottom: 20px; /* Add margin to separate image and text on small screens */
 }
 
 .press-image img {
     width: 100%;
     height: auto;
+}
+
+.press-text {
+    width: 100%; /* Set to 100% width of container */
+    max-width: 600px; /* Add a max-width to constrain the text size */
 }
 
 .press-text h2 {
