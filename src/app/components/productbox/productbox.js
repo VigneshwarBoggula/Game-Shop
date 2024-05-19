@@ -3,9 +3,9 @@
 import React from 'react';
 import './productbox.css';
 
-const ProductBox = ({ id, title, price, image, description, addToCart }) => {
+const ProductBox = ({ id, title, price, image, description, quantity, addToCart }) => {
   const handleAddToCart = () => {
-    addToCart({ id, title, price, image });
+    addToCart({ id, title, price, image, quantity});
   };
   
   return (

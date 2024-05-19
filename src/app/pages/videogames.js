@@ -1,10 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import ProductBox from '../components/productbox/productbox';
+import { CartContext } from '../components/cartcontext/cartcontext';
 import '../styles/videogames.css';
 
 const VideoGame = () => {
+  const { addToCart } = useContext(CartContext);
+  
   return (
     <div className="video-games-page">
       <h1>Video Games</h1>
@@ -62,21 +65,33 @@ const VideoGame = () => {
       <div className="product-boxes">
         {/* Product 1 */}
         <ProductBox
+          id="1"
           image="/product1.jpg"
           title="Legend of Zelda: Tears of the Kingdom"
+          price="$69.99"
+          quantity={1}
           description="Play as Link and save Hyrule."
+          addToCart={addToCart}
         />
         {/* Product 2 */}
         <ProductBox
+          id="2"
           image="/product2.jpg"
           title="God of War: Ragnarok"
+          price="$59.99"
+          quantity={1}
           description="Help Kratos face the trials of Vallhala."
+          addToCart={addToCart}
         />
         {/* Product 3 */}
         <ProductBox
+          id="3"
           image="/product3.png"
           title="Minecraft"
+          price="$49.99"
+          quantity={1}
           description="Make the sandbox your own with Steve!"
+          addToCart={addToCart}
         />
       </div>
     </div>

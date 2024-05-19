@@ -1,16 +1,16 @@
-'use client';
+"use client"; 
 
-import React, { useState, useEffect, useContext } from 'react';
-import { CartContext } from '../components/cartcontext/cartcontext';
+import React, { useContext, useEffect, useState } from 'react';
 import trashIcon from '../../../public/trash.svg';
+import { CartContext } from '../components/cartcontext/cartcontext';
 import '../styles/cart.css';
 
-const CartItem = ({ id, title, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {
+const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {
   return (
     <li className="cart-item">
-      <img className="item-img" src={image} alt={title} />
+      <img className="item-img" src={image} alt={name} />
       <div className="item-details">
-        <h3 className="item-name">{title}</h3>
+        <h3 className="item-name">{name}</h3>
         <div className="quantity">
           <button className="minus-button" onClick={() => reduceQuantity(id)}>-</button>
           <input type="text" className="quantity-input" value={quantity} readOnly />
@@ -39,38 +39,10 @@ const OrderSummary = ({ subtotal, shippingCost, taxEstimate, total }) => {
 };
 
 const ShoppingCart = () => {
-  const { cartItems, setCartItems } = useContext(CartContext);
+  const { cartItems, removeFromCart, reduceQuantity, increaseQuantity } = useContext(CartContext);
   const [subtotal, setSubtotal] = useState(0);
   const [taxEstimate, setTaxEstimate] = useState(0);
   const [total, setTotal] = useState(0);
-
-  const addToCart = (item) => {
-    setCartItems([...cartItems, { ...item, quantity: 1 }]);
-  };
-
-  const removeFromCart = (id) => {
-    setCartItems(cartItems.filter(item => item.id !== id));
-  };
-
-  const reduceQuantity = (id) => {
-    setCartItems(prevCartItems =>
-      prevCartItems
-        .map(item =>
-          item.id === id ? { ...item, quantity: Math.max(item.quantity - 1, 0) } : item
-        )
-        .filter(item => item.quantity > 0)
-    );
-  };
-
-  const increaseQuantity = (id) => {
-    setCartItems(prevCartItems =>
-      prevCartItems
-        .map(item =>
-          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-        )
-        .filter(item => item.quantity > 0)
-    );
-  };
 
   useEffect(() => {
     const shippingCost = 5.00;
@@ -94,7 +66,7 @@ const ShoppingCart = () => {
               <CartItem
                 key={item.id}
                 id={item.id}
-                title={item.title}
+                name={item.title}
                 image={item.image}
                 price={item.price}
                 quantity={item.quantity}
