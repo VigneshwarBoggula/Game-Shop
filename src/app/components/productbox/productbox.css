@@ -40,8 +40,7 @@
 
 .buttons-container {
     margin-top: 20px; 
-    display: flex; 
-    margin-right: 10px;
+    display: flex;
 }
 
 .buttons-container button {
