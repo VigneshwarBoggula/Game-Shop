@@ -1,30 +1,44 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
+import ProductBox from '../components/productbox/productbox';
+import { CartContext } from '../components/cartcontext/cartcontext';
 import '../styles/consoles.css';
 
 const Consoles = () => {
+  const { addToCart } = useContext(CartContext);
+
   return (
     <div className="consoles-page">
       <h1>Consoles</h1>
-      <p>Browse by Platform</p>
+      <p>Browse by console</p>
+      <hr className="divider" />
       <div className="product-boxes-section">
         {/* Product Boxes */}
-        <div className="product-box">
-          <img src="/playstation.jpg" alt="PlayStation" />
-          <h3>PlayStation</h3>
-          <a href="#">Shop</a>
-        </div>
-        <div className="product-box">
-          <img src="/nintendo.jpg" alt="Nintendo" />
-          <h3>Nintendo</h3>
-          <a href="#">Shop</a>
-        </div>
-        <div className="product-box">
-          <img src="/xbox.jpg" alt="Xbox" />
-          <h3>Xbox</h3>
-          <a href="#">Shop</a>
-        </div>
+        <ProductBox
+          id="4"
+          image="/playstation.jpg"
+          title="PlayStation 5"
+          price="499.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
+        <ProductBox
+          id="5"
+          image="/nintendo.jpg"
+          title="Nintendo Switch"
+          price="259.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
+        <ProductBox
+          id="6"
+          image="/xbox.jpg"
+          title="Xbox Series X"
+          price="429.99"
+          quantity={1}
+          addToCart={addToCart}
+        />
       </div>
     </div>
   );

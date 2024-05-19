@@ -4,6 +4,13 @@ body {
     padding: 0;
 }
 
+.divider {
+    width: 100%;
+    margin: 20px 0;
+    border: 0;
+    border-top: 2px solid #ccc;
+}
+
 .product-box {
     width: calc(33.33% - 20px);
     background-color: #f9f9f9;

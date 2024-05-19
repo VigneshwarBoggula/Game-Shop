@@ -10,11 +10,6 @@ const NavigationBar = () => {
       <div className="logo">
         <Link to="/">GameShop</Link>
       </div>
-      <div className="testing">
-
-        
-        <Link to="/order">Order</Link>
-      </div>
       <div className="nav-links">
         <Link to="/">Home</Link>
         <div className="dropdown">
