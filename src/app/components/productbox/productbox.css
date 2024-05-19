@@ -25,7 +25,12 @@
 
 .product-box h3 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+}
+
+.product-box h4 {
+    font-size: 14px;
+    margin-bottom: 2px;
 }
 
 .product-box p {

@@ -8,7 +8,7 @@ import '../styles/cart.css';
 const CartItem = ({ id, title, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {
   return (
     <li className="cart-item">
-      {/*<img className="item-img" src={require(`./${image}`)} alt={title} />*/}
+      <img className="item-img" src={image} alt={title} />
       <div className="item-details">
         <h3 className="item-name">{title}</h3>
         <div className="quantity">

@@ -12,7 +12,7 @@ const ProductBox = ({ id, title, price, image, description, addToCart }) => {
     <div className="product-box">
       <img src={image} alt={title} />
       <h3>{title}</h3>
-      <p>{price}</p>
+      <h4>{price}</h4>
       <p>{description}</p>
       <div className="buttons-container">
         <button className="add-to-cart-button" onClick={handleAddToCart}>Add to Cart</button>
