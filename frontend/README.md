@@ -1,6 +1,6 @@
 # Video-Game-Store-Website
 
-An e-commerence website to purchase products and view content related to video-gaming.
+An e-commerence website to purchase products and view content related to video-gaming. Built using Next.js for frontend and Node.js for backend.
 
 ## Before You Begin
 
@@ -16,6 +16,13 @@ To run the development server:
 
 ```bash
 npm run dev
+```
+
+To run the production server:
+
+```bash
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
