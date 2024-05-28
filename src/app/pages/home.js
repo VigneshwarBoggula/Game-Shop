@@ -12,9 +12,9 @@ const Home = () => {
   return (
     <div className="home-page-content">
       <div className="top-image">
-        <img src="/top_image.png" alt="Top Image" />
+        <img src="/top_image.webp" alt="Top Image" />
       </div>
-      <hr className="divider" />
+      <hr className="divider"></hr>
       <div className="section-header">
         <h2>Popular Games</h2>
         <Link to="/videogames" className="shop-all-link">
