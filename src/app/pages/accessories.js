@@ -11,9 +11,8 @@ const Accessories = () => {
   return (
     <div className="accessories-page">
       <h1>Accessories</h1>
-      <p>Choose your hardware
-      <hr className="divider" />
-      </p>
+      <hr className="divider"></hr>
+      <p>Choose your hardware</p>
       <div className="product-boxes-section">
         {/* Product Boxes */}
         <ProductBox

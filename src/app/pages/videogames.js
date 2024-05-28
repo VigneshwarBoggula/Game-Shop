@@ -12,7 +12,7 @@ const VideoGame = () => {
     <div className="video-games-page">
       <h1>Video Games</h1>
       <p>Find your next adventure</p>
-      <hr className="divider" />
+      <hr className="divider"></hr>
       <div className="filters-and-sort-sections">
         <div className="filters-section">
           <h2>Filters</h2>
@@ -64,7 +64,7 @@ const VideoGame = () => {
           </div>
         </div>
       </div>
-      <hr className="divider" />
+      <hr className="divider"></hr>
       <div className="product-boxes">
         {/* Product 1 */}
         <ProductBox
