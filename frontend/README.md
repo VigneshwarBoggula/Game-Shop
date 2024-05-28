@@ -1,6 +1,6 @@
 # Video-Game-Store-Website
 
-An e-commerence website to purchase products and view content related to video-gaming. Built using Next.js for frontend and Node.js for backend.
+An e-commerence website to purchase products and view content related to video-gaming. Next.js for frontend, Node.js for backend, PostgreSQL for database, and Docker to connect and deploy.
 
 ## Before You Begin
 
