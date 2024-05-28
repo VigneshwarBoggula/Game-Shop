@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationBar from './components/navigationbar/navigationbar';
+import NavigationBar from '../components/navigationbar/navigationbar';
 import Home from './pages/home';
 import VideoGames from './pages/videogames';
 import Consoles from './pages/consoles';
@@ -14,7 +14,7 @@ import Contact from './pages/contact';
 import ShoppingCart from './pages/cart';
 import AccountSettings from './pages/account';
 import Order from './pages/order';
-import { CartProvider } from './components/cartcontext/cartcontext';
+import { CartProvider } from '../contexts/cartcontext/cartcontext';
 
 const Page = () => {
   return (

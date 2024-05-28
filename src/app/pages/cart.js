@@ -1,7 +1,7 @@
 "use client"; 
 
 import React, { useContext, useEffect, useState } from 'react';
-import { CartContext } from '../components/cartcontext/cartcontext';
+import { CartContext } from '../../contexts/cartcontext/cartcontext';
 import '../styles/cart.css';
 
 const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuantity, increaseQuantity }) => {

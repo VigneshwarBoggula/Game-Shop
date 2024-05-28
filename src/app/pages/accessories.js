@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useContext } from 'react';
-import ProductBox from '../components/productbox/productbox';
-import { CartContext } from '../components/cartcontext/cartcontext';
+import ProductBox from '../../models/productbox/productbox';
+import { CartContext } from '../../contexts/cartcontext/cartcontext';
 import '../styles/accessories.css';
 
 const Accessories = () => {
@@ -19,7 +19,7 @@ const Accessories = () => {
         <ProductBox
           id="7"
           image="/headsets.jpg"
-          title="Headsets"
+          title="Headset"
           price="39.99"
           quantity={1}
           addToCart={addToCart}
