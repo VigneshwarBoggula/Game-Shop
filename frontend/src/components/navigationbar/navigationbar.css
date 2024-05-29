@@ -1,4 +1,4 @@
-nav {
+.navigation-bar {
   background-color: #333333;
   color: #ffffff;
   display: flex;
@@ -43,6 +43,7 @@ nav {
 
 .icons img {
   width: 25px;
+  height: 25px;
   margin-left: 15px;
   margin-right: 15px;
   cursor: pointer;
