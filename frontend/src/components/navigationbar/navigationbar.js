@@ -1,35 +1,36 @@
 'use client';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import './navigationbar.css';
 
 const NavigationBar = () => {
   return (
     <nav className="navigation-bar">
       <div className="logo">
-        <Link to="/">GameShop</Link>
+        <Link href="/home">GameShop</Link>
       </div>
       <div className="nav-links">
-        <Link to="/">Home</Link>
+        <Link href="/home">Home</Link>
         <div className="dropdown">
-          <Link to="#" className="dropbtn">Products</Link>
+          <Link href="#" className="dropbtn">Products</Link>
           <div className="dropdown-content">
-            <Link to="/videogames">Video Games</Link>
-            <Link to="/consoles">Consoles</Link>
-            <Link to="/accessories">Accessories</Link>
+            <Link href="/videogames">Video Games</Link>
+            <Link href="/consoles">Consoles</Link>
+            <Link href="/accessories">Accessories</Link>
           </div>
         </div>
-        <Link to="/press">Press & Reviews</Link>
-        <Link to="/contact">Contact</Link>
+        <Link href="/press">Press & Reviews</Link>
+        <Link href="/contact">Contact</Link>
       </div>
       <div className="icons">
-        <img src="/search_icon.png" alt="Search" />
-        <Link to="/cart">
-          <img src="/cart_icon.png" alt="Cart" />
+        <Image src="/search_icon.png" alt="Search" width="25" height="10"/>
+        <Link href="/cart">
+          <Image src="/cart_icon.png" alt="Cart" width="25" height="10"/>
         </Link>
-        <Link to="/account">
-          <img src="/account_icon.png" alt="Account" />
+        <Link href="/account">
+          <Image src="/account_icon.png" alt="Account" width="25" height="10"/>
         </Link>
       </div>
     </nav>

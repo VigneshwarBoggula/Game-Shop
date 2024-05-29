@@ -1,8 +1,7 @@
-// AccountSettings.js
 'use client';
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/account.css';
 
 const AccountSettings = () => {
@@ -44,8 +43,8 @@ const AccountSettings = () => {
             <div className="container">
                 <aside>
                     <ul>
-                        <li><Link to="/account">Account Settings</Link></li>
-                        <li><Link to="/order">Order History</Link></li>
+                        <li><Link href="/account">Account Settings</Link></li>
+                        <li><Link href="/order">Order History</Link></li>
                     </ul>
                 </aside>
                 <main>

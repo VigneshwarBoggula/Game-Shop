@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import ProductBox from '../../models/productbox/productbox';
 import { CartContext } from '../../contexts/cartcontext/cartcontext';
 import '../styles/home.css';
@@ -17,7 +17,7 @@ const Home = () => {
       <hr className="divider"></hr>
       <div className="section-header">
         <h2>Popular Games</h2>
-        <Link to="/videogames" className="shop-all-link">
+        <Link href="/videogames" className="shop-all-link">
           <button className="shop-all-button">
             Shop All <span>&rarr;</span>
           </button>

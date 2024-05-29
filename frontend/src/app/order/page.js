@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/order.css';
 
 const Order = () => {
@@ -9,8 +9,8 @@ const Order = () => {
     <div className="container">
       <aside>
         <ul>
-          <li><Link to="/account">Account Settings</Link></li>
-          <li><Link to="/order">Order History</Link></li>
+          <li><Link href="/account">Account Settings</Link></li>
+          <li><Link href="/order">Order History</Link></li>
         </ul>
       </aside>
       <main>

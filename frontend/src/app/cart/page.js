@@ -56,33 +56,31 @@ const ShoppingCart = () => {
   }, [cartItems]);
 
   return (
-    <div>
-      <div className="container">
-        <div id="shopping-cart">
-          <h1 id="cart-title">Your Cart</h1>
-          <ul>
-            {cartItems.map(item => (
-              <CartItem
-                key={item.id}
-                id={item.id}
-                name={item.title}
-                image={item.image}
-                price={item.price}
-                quantity={item.quantity}
-                removeFromCart={removeFromCart}
-                reduceQuantity={reduceQuantity}
-                increaseQuantity={increaseQuantity}
-              />
-            ))}
-          </ul>
-        </div>
-        <OrderSummary
-          subtotal={subtotal}
-          shippingCost={5.00}
-          taxEstimate={taxEstimate}
-          total={total}
-        />
+    <div className="container">
+      <div id="shopping-cart">
+        <h1 id="cart-title">Your Cart</h1>
+        <ul>
+          {cartItems && cartItems.map(item => (
+            <CartItem
+              key={item.id}
+              id={item.id}
+              name={item.title}
+              image={item.image}
+              price={item.price}
+              quantity={item.quantity}
+              removeFromCart={removeFromCart}
+              reduceQuantity={reduceQuantity}
+              increaseQuantity={increaseQuantity}
+            />
+          ))}
+        </ul>
       </div>
+      <OrderSummary
+        subtotal={subtotal}
+        shippingCost={5.00}
+        taxEstimate={taxEstimate}
+        total={total}
+      />
     </div>
   );
 };
