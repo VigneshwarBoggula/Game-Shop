@@ -1,10 +1,10 @@
-# Video-Game-Store-Website
+# Video-Game-Store-Website / Frontend
 
-An e-commerence website to purchase products and view content related to video-gaming. Next.js for frontend, Node.js for backend, PostgreSQL for database, and Docker to connect and deploy.
+Frontend built using Next.js for frontend.
 
 ## Before You Begin
 
-Make sure to install the external dependencies of the project:
+Make sure to install the external dependencies. Run:
 
 ```bash
 npm install
@@ -12,13 +12,13 @@ npm install
 
 ## Running Server
 
-To run the development server:
+To run the frontend development server:
 
 ```bash
 npm run dev
 ```
 
-To run the production server:
+To run the frontend production server:
 
 ```bash
 npm run build
