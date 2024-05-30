@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import SettingsBar from '../../components/settingsbar/settingsbar';
+import Link from 'next/link';
 import '../styles/account.css';
 
 const AccountSettings = () => {
@@ -40,63 +40,69 @@ const AccountSettings = () => {
     };
 
     return (
-        <div>
-            <div className="container">
-                <SettingsBar />
-                <main>
-                    <section id="my-details">
-                        <h1>Account Settings</h1>
-                        <form onSubmit={handleFormSubmit}>
-                            <label htmlFor="first-name">First Name</label>
-                            <input 
-                                type="text" 
-                                id="first-name" 
-                                name="firstName" 
-                                value={formData.firstName} 
-                                onChange={handleChange} 
-                            />
-                            
-                            <label htmlFor="last-name">Last Name</label>
-                            <input 
-                                type="text" 
-                                id="last-name" 
-                                name="lastName" 
-                                value={formData.lastName} 
-                                onChange={handleChange} 
-                            />
-                            
-                            <label htmlFor="birth-date">Birth Date</label>
-                            <input 
-                                type="date" 
-                                id="birth-date" 
-                                name="birthDate" 
-                                value={formData.birthDate} 
-                                onChange={handleChange} 
-                            />
-                            
-                            <label htmlFor="phone-number">Phone Number</label>
-                            <input 
-                                type="tel" 
-                                id="phone-number" 
-                                name="phoneNumber" 
-                                value={formData.phoneNumber} 
-                                onChange={handleChange} 
-                            />
-                            
-                            <label htmlFor="email">E-mail address</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                value={formData.email} 
-                                onChange={handleChange} 
-                            />
-                            
-                            <button type="submit">Save</button>
-                        </form>
-                    </section>
-                </main>
-            </div>
+        <div className="container">
+            <aside>
+                <ul>
+                    <li><Link href="/account">Account Settings</Link></li>
+                    <li><Link href="/order">Order History</Link></li>
+                    <li><Link href="/edit_products">Product Inventory</Link></li>
+                    <li><Link href="/edit_articles">Article Catalog</Link></li>
+                    <li><Link href="/view_inqueries">View Inqueries</Link></li>
+                </ul>
+            </aside>
+            <main>
+                <section id="my-details">
+                    <h1>Account Settings</h1>
+                    <form onSubmit={handleFormSubmit}>
+                        <label htmlFor="first-name">First Name</label>
+                        <input 
+                            type="text" 
+                            id="first-name" 
+                            name="firstName" 
+                            value={formData.firstName} 
+                            onChange={handleChange} 
+                        />
+                        
+                        <label htmlFor="last-name">Last Name</label>
+                        <input 
+                            type="text" 
+                            id="last-name" 
+                            name="lastName" 
+                            value={formData.lastName} 
+                            onChange={handleChange} 
+                        />
+                        
+                        <label htmlFor="birth-date">Birth Date</label>
+                        <input 
+                            type="date" 
+                            id="birth-date" 
+                            name="birthDate" 
+                            value={formData.birthDate} 
+                            onChange={handleChange} 
+                        />
+                        
+                        <label htmlFor="phone-number">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone-number" 
+                            name="phoneNumber" 
+                            value={formData.phoneNumber} 
+                            onChange={handleChange} 
+                        />
+                        
+                        <label htmlFor="email">E-mail address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            value={formData.email} 
+                            onChange={handleChange} 
+                        />
+                        
+                        <button type="submit">Save</button>
+                    </form>
+                </section>
+            </main>
         </div>
     );
 };
