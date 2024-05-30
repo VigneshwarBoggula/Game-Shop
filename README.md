@@ -14,11 +14,25 @@ npm install
 
 ## Running Server
 
-To run the server:
+To build the stack:
 
 ```bash
 docker compose build
+```
+
+To run the frontend
+```bash
 docker compose up -d frontend
+```
+
+To run the backend
+```bash
+docker compose up -d backend
+```
+
+To run the db
+```bash
+docker compose up -d db
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
