@@ -1,62 +1,17 @@
-body {
+body, html {
     font-family: Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 * {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-header {
-    background-color: #f1f1f1;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-input[type="search"] {
-    padding: 8px;
-}
-
-.user-info a {
-    padding: 8px;
-    text-decoration: none;
-    color: black;
 }
 
 .container {
     display: flex;
-    height: calc(100vh - 40px); 
-}
-
-aside {
-    flex: 0 0 200px;
-    background-color: #696868;
-    color: white;
-    padding: 20px;
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-}
-
-aside ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
+    min-height: 100vh;
 }
 
 main {
@@ -67,41 +22,62 @@ main {
 
 form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
 }
 
-form label {
-    justify-self: end;
+label {
+    text-align: right;
 }
 
-form input, form button {
-    justify-self: start;
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-form button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f1f1f1;
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
 }
 
 button {
-    background-color: #333; 
-    color: white; 
-    border: none;
-    padding: 10px 20px; 
-    font-size: 16px; 
     cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     transition: background-color 0.3s;
-    display: block; 
 }
 
 button:hover {
-    background-color: #555; 
+    background-color: #555;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info a {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
 }
