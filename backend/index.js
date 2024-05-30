@@ -3,24 +3,22 @@ const { PrismaClient } = require('@prisma/client');
 const app = express();
 const prisma = new PrismaClient();
 
-// json
+// middleware
 app.use(express.json());
+app.use(cors());
 
-// cors
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
-
-// test api
+// test api endpoint
 app.get('/test', (req, res) => {
   try {
     res.status(200).json({ message: 'API is working' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+});
+
+// handle all other routes with Next.js
+server.all('*', (req, res) => {
+  return handle(req, res);
 });
 
 // run server
