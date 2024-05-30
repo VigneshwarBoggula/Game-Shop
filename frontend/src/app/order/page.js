@@ -2,17 +2,13 @@
 
 import React from 'react';
 import Link from 'next/link';
+import SettingsBar from '../../components/settingsbar/settingsbar';
 import '../styles/order.css';
 
 const Order = () => {
   return (
     <div className="container">
-      <aside>
-        <ul>
-          <li><Link href="/account">Account Settings</Link></li>
-          <li><Link href="/order">Order History</Link></li>
-        </ul>
-      </aside>
+      <SettingsBar />
       <main>
         <h1>Order History</h1>
         <table>

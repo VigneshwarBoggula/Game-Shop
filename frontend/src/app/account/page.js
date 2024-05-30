@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import SettingsBar from '../../components/settingsbar/settingsbar';
 import '../styles/account.css';
 
 const AccountSettings = () => {
@@ -41,12 +42,7 @@ const AccountSettings = () => {
     return (
         <div>
             <div className="container">
-                <aside>
-                    <ul>
-                        <li><Link href="/account">Account Settings</Link></li>
-                        <li><Link href="/order">Order History</Link></li>
-                    </ul>
-                </aside>
+                <SettingsBar />
                 <main>
                     <section id="my-details">
                         <h1>Account Settings</h1>
