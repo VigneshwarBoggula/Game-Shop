@@ -1,14 +1,22 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import SettingsBar from '../../components/settingsbar/settingsbar';
+import Link from 'next/link';
 import '../styles/order.css';
 
 const Order = () => {
   return (
     <div className="container">
-      <SettingsBar />
+    <aside>
+        <ul>
+            <li><Link href="/account">Account Settings</Link></li>
+            <li><Link href="/order">Order History</Link></li>
+            <li><Link href="/edit_products">Product Inventory</Link></li>
+            <li><Link href="/edit_articles">Article Catalog</Link></li>
+            <li><Link href="/view_inqueries">View Inqueries</Link></li>
+        </ul>
+    </aside>
       <main>
         <h1>Order History</h1>
         <table>
