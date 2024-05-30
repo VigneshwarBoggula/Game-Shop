@@ -14,17 +14,11 @@ npm install
 
 ## Running Server
 
-To run the development server:
+To run the server:
 
 ```bash
-docker-compose up
-```
-
-To run the production server:
-
-```bash
-docker-compose -f docker-compose-prod.yml up -d --build
-docker-compose -f docker-compose-prod.yml up -d --start
+docker compose build
+docker compose up -d frontend
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
