@@ -1,8 +1,7 @@
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
-
-const prisma = new PrismaClient();
 const app = express();
+const prisma = new PrismaClient();
 
 // json
 app.use(express.json());

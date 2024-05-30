@@ -13,7 +13,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//User with id as int autoincrement, name as string and email as string
+// test - user with id as int autoincrement, name as string and email as string
 model User {
   id    Int     @id @default(autoincrement())
   name  String
