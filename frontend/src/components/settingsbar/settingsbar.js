@@ -6,14 +6,14 @@ import './settingsbar.css';
 
 const SettingsBar = () => {
     return (
-        <div className="container">
+        <div className="sidebar">
             <aside>
                 <ul>
                     <li><Link href="/account">Account Settings</Link></li>
                     <li><Link href="/order">Order History</Link></li>
                     <li><Link href="/edit_products">Product Inventory</Link></li>
                     <li><Link href="/edit_articles">Article Catalog</Link></li>
-                    <li><Link href="/view_contacts">View Inqueries</Link></li>
+                    <li><Link href="/view_inqueries">View Inqueries</Link></li>
                 </ul>
             </aside>
         </div>
