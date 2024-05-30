@@ -29,7 +29,9 @@
     "frontend/next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.js",
-    "**/*.jsx"
+    "**/*.jsx", 
+    "**/*.ts",
+    "**/*.tsx"  
   ],
   "exclude": [
     "frontend/node_modules"
