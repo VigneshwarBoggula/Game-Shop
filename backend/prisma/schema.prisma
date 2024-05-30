@@ -13,9 +13,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// test - user with id as int autoincrement, name as string and email as string
-model User {
-  id    Int     @id @default(autoincrement())
-  name  String
-  email String 
+model Product {
+  id          Int      @id @default(autoincrement())
+  type        String
+  name        String
+  description String
+  price       Float
+  stock       Int
+  category    String
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String
+}
+
+model ContactForm {
+  id          Int      @id @default(autoincrement())
+  name        String
+  email       String
+  inquery     String
 }
