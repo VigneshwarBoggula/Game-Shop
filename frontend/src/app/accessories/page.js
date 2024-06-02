@@ -35,7 +35,7 @@ const Accessories = () => {
           id="9"
           image="/chargers.jpg"
           title="Charger"
-          price="29.99"
+          price="19.99"
           quantity={1}
           addToCart={addToCart}
         />
