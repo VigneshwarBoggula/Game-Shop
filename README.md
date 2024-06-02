@@ -1,4 +1,4 @@
-# Video-Game-Store-Website
+# Game-Shop
 
 An e-commerence website to purchase products and view content related to video-gaming. This is a full stack project. Next.js for frontend, Node.js and Express.js for backend, PostgreSQL for database, and Docker to connect and deploy.
 
