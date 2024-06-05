@@ -40,6 +40,25 @@ const Home = () => {
         </Link>
       </div>
       <div className="product-boxes">
+      <ProductBox
+          id="98"
+          image="/product1.jpg"
+          title="Test 1"
+          price="9.99"
+          quantity={1}
+          description="This is here manually for testing."
+          addToCart={addToCart}
+        />
+        {/* Product 2 */}
+        <ProductBox
+          id="99"
+          image="/product2.jpg"
+          title="Test 2"
+          price="19.99"
+          quantity={1}
+          description="This is here manually for testing."
+          addToCart={addToCart}
+        />
         {products.map((product) => (
           <ProductBox
             key={product.id}
