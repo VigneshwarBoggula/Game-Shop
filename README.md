@@ -26,7 +26,7 @@ docker compose build
 docker compose up -d backend
 ```
 
-If the backend and database aren't synced, then cd to the backend and run: 
+SKIP THIS STEP - If the backend and database aren't synced, then cd to the backend and run: 
 ```bash
 docker exec -it backend npx prisma migrate dev --name init
 ```
