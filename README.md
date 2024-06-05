@@ -12,27 +12,34 @@ Make sure to install the external dependencies. Cd into the frontend and backend
 npm install
 ```
 
-## Running Server
+## Running Full Stack
 
-To build the stack:
+From the root run the directory:
+```bash 
+docker compose up -d db
+```
 
+cd to the backend: 
 ```bash
+npx prisma generate
 docker compose build
-```
-
-To run the frontend
-```bash
-docker compose up -d frontend
-```
-
-To run the backend
-```bash
 docker compose up -d backend
 ```
 
-To run the db
+SKIP THIS STEP - If the backend and database aren't synced, then cd to the backend and run: 
 ```bash
-docker compose up -d db
+docker exec -it backend npx prisma migrate dev --name init
+```
+
+Able to add/update/remove to database via docker execution commands, postman, or running:
+```bash
+npx prisma studio
+```
+
+cd to frontend:
+```bash
+docker compose build
+docker compose up -d frontend
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

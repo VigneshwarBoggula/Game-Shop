@@ -40,16 +40,8 @@ const AccountSettings = () => {
     };
 
     return (
-        <div className="container">
-            <aside>
-                <ul>
-                    <li><Link href="/account">Account Settings</Link></li>
-                    <li><Link href="/order">Order History</Link></li>
-                    <li><Link href="/edit_products">Product Inventory</Link></li>
-                    <li><Link href="/edit_articles">Article Catalog</Link></li>
-                    <li><Link href="/view_inqueries">View Inqueries</Link></li>
-                </ul>
-            </aside>
+        <div className="account-container">
+            <SettingsBar />
             <main>
                 <section id="my-details">
                     <h1>Account Settings</h1>

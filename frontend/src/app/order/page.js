@@ -7,16 +7,8 @@ import '../styles/order.css';
 
 const Order = () => {
   return (
-    <div className="container">
-    <aside>
-        <ul>
-            <li><Link href="/account">Account Settings</Link></li>
-            <li><Link href="/order">Order History</Link></li>
-            <li><Link href="/edit_products">Product Inventory</Link></li>
-            <li><Link href="/edit_articles">Article Catalog</Link></li>
-            <li><Link href="/view_inqueries">View Inqueries</Link></li>
-        </ul>
-    </aside>
+    <div className="order-container">
+      <SettingsBar />
       <main>
         <h1>Order History</h1>
         <table>

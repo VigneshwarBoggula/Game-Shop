@@ -9,7 +9,7 @@ body, html {
     box-sizing: border-box;
 }
 
-.container {
+.account-container {
     display: flex;
     min-height: 100vh;
 }

@@ -15,23 +15,15 @@ datasource db {
 
 model Product {
   id          Int      @id @default(autoincrement())
-  type        String
   name        String
-  description String
+  image       String
   price       Float
+  description String
   stock       Int
   category    String
 }
 
-model Article {
+// TODO
+model Order {
   id          Int      @id @default(autoincrement())
-  title       String
-  content     String
-}
-
-model ContactForm {
-  id          Int      @id @default(autoincrement())
-  name        String
-  email       String
-  inquery     String
 }

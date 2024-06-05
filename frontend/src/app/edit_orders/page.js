@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import axios from 'axios';
+import SettingsBar from '../../components/settingsbar/settingsbar';
 
-const ArticlesPage = () => {
+import '../styles/edit_orders.css';
+
+const OrderPage = () => {
   const [newArticle, setNewArticle] = useState({ title: '', content: '' });
   const [editArticle, setEditArticle] = useState({ id: null, title: '', content: '' });
   
@@ -49,18 +53,9 @@ const ArticlesPage = () => {
   };
 
   return (
-    <div className="container">
-      <aside>
-        <ul>
-          <li><Link href="/account">Account Settings</Link></li>
-          <li><Link href="/order">Order History</Link></li>
-          <li><Link href="/edit_products">Product Inventory</Link></li>
-          <li><Link href="/edit_articles">Article Catalog</Link></li>
-          <li><Link href="/view_inquiries">View Inquiries</Link></li>
-        </ul>
-      </aside>
-
-      <div>
+    <div className="edit-articles-container">
+      <SettingsBar />
+      <div className="edit-articles-sub-container">
         <h2>Edit Articles Here</h2>
 
         <h3>Add New Article</h3>
@@ -115,4 +110,4 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export default OrderPage;

@@ -11,9 +11,8 @@ const SettingsBar = () => {
                 <ul>
                     <li><Link href="/account">Account Settings</Link></li>
                     <li><Link href="/order">Order History</Link></li>
-                    <li><Link href="/edit_products">Product Inventory</Link></li>
-                    <li><Link href="/edit_articles">Article Catalog</Link></li>
-                    <li><Link href="/view_inqueries">View Inqueries</Link></li>
+                    <li><Link href="/edit_products">Manage Products</Link></li>
+                    <li><Link href="/edit_orders">Manage Orders</Link></li>
                 </ul>
             </aside>
         </div>
