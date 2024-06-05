@@ -10,9 +10,27 @@ Make sure to install the external dependencies. Run:
 npm install
 ```
 
+Create a file titled ".env" and add the following code:
+
+```bash
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres?schema=public"
+```
+
 ## Running Server
 
-To run the backend server:
+First generate the models:
+
+```bash
+npx prisma generate
+```
+
+Sync database with schema if not done alreay. Cd to root and run: 
+
+```bash
+docker exec -it backend npx prisma migrate dev --name init
+```
+
+Then run the backend server:
 
 ```bash
 node index.js
