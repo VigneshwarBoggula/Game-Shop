@@ -1,10 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import axios from 'axios';
 import SettingsBar from '../../components/settingsbar/settingsbar';
 
-const ArticlesPage = () => {
+import '../styles/edit_orders.css';
+
+const OrderPage = () => {
   const [newArticle, setNewArticle] = useState({ title: '', content: '' });
   const [editArticle, setEditArticle] = useState({ id: null, title: '', content: '' });
   
@@ -107,4 +110,4 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export default OrderPage;

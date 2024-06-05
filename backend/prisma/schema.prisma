@@ -23,16 +23,7 @@ model Product {
   category    String
 }
 
-model Article {
+// TODO
+model Order {
   id          Int      @id @default(autoincrement())
-  title       String
-  image       String
-  content     String
-}
-
-model ContactForm {
-  id          Int      @id @default(autoincrement())
-  name        String
-  email       String
-  inquery     String
 }
