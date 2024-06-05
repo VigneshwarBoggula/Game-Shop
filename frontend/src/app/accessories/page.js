@@ -1,44 +1,46 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 import ProductBox from '../../models/productbox/productbox';
 import { CartContext } from '../../contexts/cartcontext/cartcontext';
 import '../styles/accessories.css';
 
 const Accessories = () => {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
   const { addToCart } = useContext(CartContext);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get(`${apiUrl}/products/category/accessories`);
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="accessories-page">
       <h1>Accessories</h1>
       <hr className="divider"></hr>
       <p>Choose your hardware</p>
-      <div className="product-boxes-section">
-        {/* Product Boxes */}
-        <ProductBox
-          id="7"
-          image="/headsets.jpg"
-          title="Headset"
-          price="39.99"
-          quantity={1}
-          addToCart={addToCart}
-        />
-        <ProductBox
-          id="8"
-          image="/controllers.jpg"
-          title="Controller"
-          price="59.99"
-          quantity={1}
-          addToCart={addToCart}
-        />
-        <ProductBox
-          id="9"
-          image="/chargers.jpg"
-          title="Charger"
-          price="19.99"
-          quantity={1}
-          addToCart={addToCart}
-        />
+      <div className="product-boxes">
+        {products.map((product) => (
+          <ProductBox
+            key={product.id}
+            id={product.id}
+            image={product.image}
+            title={product.name}
+            price={product.price}
+            quantity={1}
+            addToCart={addToCart}
+          />
+        ))}
       </div>
     </div>
   );
