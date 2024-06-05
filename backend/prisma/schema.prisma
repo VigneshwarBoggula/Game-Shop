@@ -15,10 +15,10 @@ datasource db {
 
 model Product {
   id          Int      @id @default(autoincrement())
-  type        String
   name        String
-  description String
+  image       String
   price       Float
+  description String
   stock       Int
   category    String
 }
@@ -26,6 +26,7 @@ model Product {
 model Article {
   id          Int      @id @default(autoincrement())
   title       String
+  image       String
   content     String
 }
 
