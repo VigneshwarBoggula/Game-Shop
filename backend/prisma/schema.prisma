@@ -26,7 +26,7 @@ model Product {
 // TODO
 model Order {
   id         Int      @id @default(autoincrement())
-  itemName   String
+  items   OrderItem[]
   date       DateTime
   quantity   Int
   total      Float
