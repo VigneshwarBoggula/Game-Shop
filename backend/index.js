@@ -148,6 +148,69 @@ app.delete('/products/:id', async (req, res) => {
 
 /* Order */
 // TODO
+// Get all orders by user ID
+app.get('/orders/:userId', async (req, res) => {
+  try {
+    const orders = await prisma.order.findMany({
+      where: {
+        userId: Number(req.params.userId),
+      },
+    });
+    res.status(200).json(orders);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Create a new order
+app.post('/orders', async (req, res) => {
+  try {
+    const order = await prisma.order.create({
+      data: {
+        itemName: req.body.itemName,
+        date: new Date(req.body.date),
+        quantity: req.body.quantity,
+        total: req.body.total,
+        status: req.body.status,
+        userId: req.body.userId,
+      },
+    });
+    res.status(201).json(order);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Update an order status
+app.put('/orders/:id', async (req, res) => {
+  try {
+    const order = await prisma.order.update({
+      where: {
+        id: Number(req.params.id),
+      },
+      data: {
+        status: req.body.status,
+      },
+    });
+    res.status(200).json(order);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Delete an order
+app.delete('/orders/:id', async (req, res) => {
+  try {
+    const order = await prisma.order.delete({
+      where: {
+        id: Number(req.params.id),
+      },
+    });
+    res.status(200).json(order);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 //start server
 const PORT = process.env.PORT || 4000;

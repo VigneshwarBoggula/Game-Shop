@@ -1,11 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SettingsBar from '../../components/settingsbar/settingsbar';
 import Link from 'next/link';
 import '../styles/order.css';
 
 const Order = () => {
+  const [orders, setOrders] = useState([]);
+  const userId = 1; // Replace with the actual user ID
+
+  useEffect(() => {
+    async function fetchOrders() {
+      const response = await fetch(`/orders/${userId}`);
+      const data = await response.json();
+      setOrders(data);
+    }
+    fetchOrders();
+  }, []);
+
   return (
     <div className="order-container">
       <SettingsBar />
@@ -22,20 +34,15 @@ const Order = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Xbox One S</td>
-              <td>2024-05-01</td>
-              <td>1 item</td>
-              <td>$449.99</td>
-              <td>Shipped</td>
-            </tr>
-            <tr>
-              <td>GTA 5</td>
-              <td>2024-04-25</td>
-              <td>1 item</td>
-              <td>$59.99</td>
-              <td>Delivered</td>
-            </tr>
+            {orders.map(order => (
+              <tr key={order.id}>
+                <td>{order.itemName}</td>
+                <td>{new Date(order.date).toLocaleDateString()}</td>
+                <td>{order.quantity} item(s)</td>
+                <td>${order.total.toFixed(2)}</td>
+                <td>{order.status}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </main>
