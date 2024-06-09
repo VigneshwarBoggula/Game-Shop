@@ -7,7 +7,7 @@ import '../styles/order.css';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
-  const userId = 1; // Replace with the actual user ID
+  const userId = 1; 
 
   useEffect(() => {
     async function fetchOrders() {
