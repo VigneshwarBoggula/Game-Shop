@@ -44,7 +44,7 @@ body {
     margin-top: 50px;
 }
 
-.container {
+.contact-container {
     display: flex;
     justify-content: space-between;
     width: 80%;

@@ -6,7 +6,7 @@ import '../styles/contact.css';
 const ContactForm = () => {
   return (
     <div className="contact-page">
-      <div className="container">
+      <div className="contact-container">
         <div className="address">
           <h1>Contact Us</h1>
           <p>Email: <a href="mailto:kaiwm@uci.edu">kaiwm@uci.edu</a></p>
