@@ -14,12 +14,14 @@ npm install
 
 ## Running Full Stack
 
+First make sure to open the Docker application. 
+
 Cd to the backend and run: 
 ```bash
 npx prisma generate
 ```
 
-From the root run the directory:
+From the root run the database:
 ```bash 
 docker compose up -d db
 ```
@@ -30,20 +32,22 @@ docker compose build
 docker compose up -d backend
 ```
 
-SKIP THIS STEP - If the backend and database aren't synced, then cd to the backend and run: 
-```bash
-docker exec -it backend npx prisma migrate dev --name init
-```
-
-Able to add/update/remove to database via docker execution commands, postman, or run:
-```bash
-npx prisma studio
-```
-
 cd to frontend:
 ```bash
 docker compose build
 docker compose up -d frontend
+```
+
+## Commands for Development 
+
+If the backend and database aren't synced (which should be already) then cd to the backend and run: 
+```bash
+docker exec -it backend npx prisma migrate dev --name init
+```
+
+You can add/update/remove to database via docker execution commands, postman, or run:
+```bash
+npx prisma studio
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
