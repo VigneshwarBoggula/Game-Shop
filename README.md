@@ -38,6 +38,8 @@ docker compose build
 docker compose up -d frontend
 ```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ## Commands for Development 
 
 If the backend and database aren't synced (which should be already) then cd to the backend and run: 
@@ -49,5 +51,3 @@ You can add/update/remove to database via docker execution commands, postman, or
 ```bash
 npx prisma studio
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
