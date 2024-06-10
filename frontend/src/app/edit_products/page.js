@@ -12,6 +12,7 @@ const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({ name: '', image: '', price: '', description: '', stock: '', category: '' });
   const [updateProduct, setUpdateProduct] = useState({ id: '', name: '', image: '', price: '', description: '', stock: '', category: '' });
+  const [error, setError] = useState('');
 
   // Fetch products
   useEffect(() => {
@@ -20,7 +21,7 @@ const ProductsPage = () => {
         const response = await axios.get(`${apiUrl}/products`);
         setProducts(response.data.reverse());
       } catch (error) {
-        console.error('Error fetching data:', error);
+        setError('Error fetching data');
       }
     };
 
@@ -37,12 +38,12 @@ const ProductsPage = () => {
         price: parseFloat(newProduct.price),
         stock: parseInt(newProduct.stock, 10),
       };
-  
+
       const response = await axios.post(`${apiUrl}/products`, productToAdd);
       setProducts([response.data, ...products]);
       setNewProduct({ name: '', image: '', price: '', description: '', stock: '', category: '' });
     } catch (error) {
-      console.error('Error creating product:', error);
+      setError('Error creating product');
     }
   };
 
@@ -56,7 +57,7 @@ const ProductsPage = () => {
         price: parseFloat(updateProduct.price),
         stock: parseInt(updateProduct.stock, 10),
       };
-  
+
       await axios.put(`${apiUrl}/products/${productToUpdate.id}`, productToUpdate);
       setUpdateProduct({ id: '', name: '', image: '', price: '', description: '', stock: '', category: '' });
       setProducts(
@@ -68,7 +69,7 @@ const ProductsPage = () => {
         })
       );
     } catch (error) {
-      console.error('Error updating product:', error);
+      setError('Error updating product');
     }
   };
 
@@ -78,7 +79,7 @@ const ProductsPage = () => {
       await axios.delete(`${apiUrl}/products/${productId}`);
       setProducts(products.filter((product) => product.id !== productId));
     } catch (error) {
-      console.error('Error deleting product:', error);
+      setError('Error deleting product');
     }
   };
 
@@ -87,6 +88,9 @@ const ProductsPage = () => {
       <SettingsBar />
       <div className="product-boxes">
         <h1 className="product-management-header">Product Management</h1>
+
+        {/* Error display */}
+        {error && <div className="error-message">{error}</div>}
 
         {/* Create product */}
         <form onSubmit={createProduct} className="create-product">
@@ -170,7 +174,7 @@ const ProductsPage = () => {
         {/* Display products */}
         <div className="product-grid">
           {products.map((product) => (
-            <div key={product.id} className="product-box">
+            <div key={product.id} className="product-card">
               <div className="product-info"><strong>ID:</strong> {product.id}</div>
               <div className="product-info"><strong>Name:</strong> {product.name}</div>
               <div className="product-info"><strong>Price:</strong> ${product.price}</div>
