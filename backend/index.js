@@ -147,7 +147,6 @@ app.delete('/products/:id', async (req, res) => {
 });
 
 /* Order */
-// TODO
 // Get all orders by user ID
 app.get('/orders/:userId', async (req, res) => {
   try {
