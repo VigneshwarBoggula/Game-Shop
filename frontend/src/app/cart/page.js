@@ -24,7 +24,7 @@ const CartItem = ({ id, name, image, price, quantity, removeFromCart, reduceQuan
 
 const OrderSummary = ({ subtotal, shippingCost, taxEstimate, total }) => {
   return (
-    <div id="receipt">
+    <div>
       <h3 id="order-summary">Order Summary</h3>
       <ul id="total-summary">
         <li className="subtotal-item">Subtotal: <span>${subtotal}</span></li>
@@ -32,7 +32,6 @@ const OrderSummary = ({ subtotal, shippingCost, taxEstimate, total }) => {
         <li className="subtotal-item">Tax Estimate: <span>${taxEstimate}</span></li>
         <li className="subtotal-item"><h2>Total:</h2> <h2><span>${total}</span></h2></li>
       </ul>
-      <button id="checkout">Checkout</button>
     </div>
   );
 };
@@ -55,6 +54,29 @@ const ShoppingCart = () => {
     setTotal(calculateTotal);
   }, [cartItems]);
 
+  const handleCheckout = async () => {
+
+    // Create Order object
+    const order = {
+      items: cartItems.map(item => ({ id: item.id, quantity: item.quantity })),
+      date: new Date(),
+      total: parseFloat(total),
+      status: 'Pending',
+      id: Math.floor(Math.random() * 900) + 100 // simulate backend, plz remove
+    };
+
+    // Frontend sim for order handling
+    let existingOrders = JSON.parse(localStorage.getItem('orders'));
+    if (!Array.isArray(existingOrders)) {
+      existingOrders = [];
+    }    
+    
+    existingOrders.push(order);
+    localStorage.setItem('orders', JSON.stringify(existingOrders));
+
+    alert('Order placed successfully!');
+  }
+
   return (
     <div className="container">
       <div id="shopping-cart">
@@ -75,12 +97,17 @@ const ShoppingCart = () => {
           ))}
         </ul>
       </div>
-      <OrderSummary
-        subtotal={subtotal}
-        shippingCost={5.00}
-        taxEstimate={taxEstimate}
-        total={total}
-      />
+
+      <div id="receipt">
+        <OrderSummary
+          subtotal={subtotal}
+          shippingCost={5.00}
+          taxEstimate={taxEstimate}
+          total={total}
+        />
+        <button id="checkout" onClick={handleCheckout}>Checkout</button>
+      </div>
+
     </div>
   );
 };

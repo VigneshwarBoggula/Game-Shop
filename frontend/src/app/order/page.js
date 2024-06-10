@@ -9,12 +9,31 @@ const Order = () => {
   const [orders, setOrders] = useState([]);
   const userId = 1; 
 
+  /*
   useEffect(() => {
+    
     async function fetchOrders() {
       const response = await fetch(`/orders/${userId}`);
-      const data = await response.json();
+      const data = await response.json(); 
       setOrders(data);
     }
+
+    fetchOrders();
+  }, []); */
+
+  // Frontend only
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const storedOrders = localStorage.getItem('orders');
+        if (storedOrders) {
+          setOrders(JSON.parse(storedOrders));
+        }
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+      }
+    };
+
     fetchOrders();
   }, []);
 
@@ -26,23 +45,23 @@ const Order = () => {
         <table>
           <thead>
             <tr>
-              <th>Item Name</th>
+              <th>Order #</th>
               <th>Date</th>
-              <th>Quantity</th>
               <th>Total</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
+        
             {orders.map(order => (
-              <tr key={order.id}>
-                <td>{order.itemName}</td>
-                <td>{new Date(order.date).toLocaleDateString()}</td>
-                <td>{order.quantity} item(s)</td>
-                <td>${order.total.toFixed(2)}</td>
-                <td>{order.status}</td>
-              </tr>
+                <tr key={order.id}>
+                  <td>Order #{order.id}</td>
+                  <td>{new Date(order.date).toLocaleDateString()}</td>
+                  <td>${order.total}</td>
+                  <td>{order.status}</td>
+                </tr>
             ))}
+
           </tbody>
         </table>
       </main>
